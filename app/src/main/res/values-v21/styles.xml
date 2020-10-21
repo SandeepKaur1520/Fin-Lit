@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="btn_black" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:colorButtonNormal">#020304</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="background">@drawable/btn_black_background</item>
+    </style>
+</resources>
