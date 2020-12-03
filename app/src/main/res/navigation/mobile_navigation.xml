@@ -145,7 +145,7 @@
         tools:layout="@layout/fragment_blood_pressure" />
     <fragment
         android:id="@+id/navigation_height"
-        android:name="com.android.finlit.ui.home.my_medical_records."
+        android:name="com.android.finlit.ui.home.my_medical_records.measurement.height.HeightFragment"
         android:label="@string/title_my_profile"
         tools:layout="@layout/fragment_height" />
     <fragment
