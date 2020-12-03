@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.home.my_medical_records.medication.MedicationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_header_medication_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackgroundLightBlue"
+            android:paddingBottom="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Medication Course"
+                android:textColor="@color/black"
+                android:textSize="35dp"
+                />
+        </RelativeLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcv_medication_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_header_medication_fragment"
+            android:outlineSpotShadowColor="@color/black"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="25dp">
+
+                <TextView
+                    android:id="@+id/tv_card_header_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:drawableLeft="@drawable/ic_pills"
+                    android:text="  Medication Details"
+                    android:textColor="@color/black" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_course_details"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_card_header_1"
+                    android:layout_marginVertical="5dp"
+                    android:hint="Course Details"
+                    app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopStart="@dimen/edit_text_corner_radius"
+                    app:boxStrokeColor="@color/black"
+                    app:boxStrokeWidth="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_drug_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/til_course_details"
+                    android:layout_marginVertical="5dp"
+                    android:hint="Drug Name/Medication"
+                    app:endIconDrawable="@drawable/ic_baseline_search_24"
+                    app:endIconMode="custom"
+                    app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopStart="@dimen/edit_text_corner_radius"
+                    app:boxStrokeColor="@color/black"
+                    app:boxStrokeWidth="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_manufarcutring_form"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/til_drug_name"
+                    android:layout_marginVertical="5dp"
+                    android:hint="Manufacturing Form"
+                    app:endIconDrawable="@drawable/ic_baseline_search_24"
+                    app:endIconMode="custom"
+                    app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopStart="@dimen/edit_text_corner_radius"
+                    app:boxStrokeColor="@color/black"
+                    app:boxStrokeWidth="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcv_intake_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mcv_medication_details"
+            android:outlineSpotShadowColor="@color/black"
+            android:layout_marginTop="30dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="25dp">
+
+                <TextView
+                    android:id="@+id/tv_card_header_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:drawableLeft="@drawable/ic_hour_glass"
+                    android:text="  Intake Details"
+                    android:textColor="@color/black" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_start_date"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_card_header_2"
+                    android:layout_marginVertical="5dp"
+                    android:hint="Start Date "
+                    app:endIconDrawable="@drawable/ic_calender"
+                    app:endIconTintMode="screen"
+                    app:endIconMode="custom"
+                    app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopStart="@dimen/edit_text_corner_radius"
+                    app:boxStrokeColor="@color/black"
+                    app:boxStrokeWidth="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="date"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_course_duration"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/til_start_date"
+                    android:layout_marginVertical="5dp"
+                    android:hint="Drug Name/Medication"
+                    app:endIconDrawable="@drawable/ic_baseline_search_24"
+                    app:endIconMode="custom"
+                    app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopStart="@dimen/edit_text_corner_radius"
+                    app:boxStrokeColor="@color/black"
+                    app:boxStrokeWidth="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_interval"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/til_course_duration"
+                    android:layout_marginVertical="5dp"
+                    android:hint="Manufacturing Form"
+                    app:endIconDrawable="@drawable/ic_baseline_search_24"
+                    app:endIconMode="custom"
+                    app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopStart="@dimen/edit_text_corner_radius"
+                    app:boxStrokeColor="@color/black"
+                    app:boxStrokeWidth="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcv_interval_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mcv_intake_details"
+            android:outlineSpotShadowColor="@color/black"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="25dp">
+
+                <TextView
+                    android:id="@+id/tv_card_header_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:drawableLeft="@drawable/ic_hour_glass"
+                    android:text="  Interval Details"
+                    android:textColor="@color/black" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_time"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_card_header_3"
+                    android:layout_marginVertical="5dp"
+                    android:hint="Time"
+                    app:endIconDrawable="@drawable/ic_calender"
+                    app:endIconTintMode="screen"
+                    app:endIconMode="custom"
+                    app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
+                    app:boxCornerRadiusTopStart="@dimen/edit_text_corner_radius"
+                    app:boxStrokeColor="@color/black"
+                    app:boxStrokeWidth="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -20,6 +20,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthCredential;
@@ -27,6 +29,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+
+import com.android.finlit.firestore.*;
 
 public class WelcomeScreen extends AppCompatActivity {
     private static final String TAG = "WelcomeScreen";
@@ -37,6 +41,10 @@ public class WelcomeScreen extends AppCompatActivity {
 
     Button btn_phone , btn_login, btn_google ;
     TextView tv_signup ;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,7 +90,7 @@ public class WelcomeScreen extends AppCompatActivity {
 // ...
 // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-
+        alreadySignedIn();
 
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -95,6 +103,15 @@ public class WelcomeScreen extends AppCompatActivity {
 
 
     }
+    void alreadySignedIn(){
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user != null){
+            Intent intent = new Intent(WelcomeScreen.this,MyDashboard.class);
+            startActivity(intent);
+            WelcomeScreen.this.finish();
+        }
+    }
+
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -128,6 +145,22 @@ public class WelcomeScreen extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            new FirestoreUtils().uploadUserData(user).addOnSuccessListener(new OnSuccessListener() {
+                                @Override
+                                public void onSuccess(Object o) {
+                                    Log.d(TAG, "onSuccess: +"+o);
+                                    Snackbar.make(btn_google,"User Data Saved",Snackbar.LENGTH_LONG).show();
+                                    Intent intent = new Intent(WelcomeScreen.this,MyDashboard.class);
+                                    startActivity(intent);
+                                    WelcomeScreen.this.finish();
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Log.d(TAG, "onFailure: "+e.getMessage());
+                                    e.printStackTrace();
+                                }
+                            });
 
                         } else {
                             // If sign in fails, display a message to the user.

@@ -43,6 +43,7 @@ public class SignUpBottomSheet extends BottomSheetDialogFragment {
         til_password = dialog.findViewById(R.id.til_password);
         til_confirmPassword = dialog.findViewById(R.id.til_confirm_password);
 
+        btn_signup = dialog.findViewById(R.id.btn_signup);
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -50,9 +51,16 @@ public class SignUpBottomSheet extends BottomSheetDialogFragment {
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO : Create Authecation  using Email Password
+                boolean isFullName = isFullName();
+                boolean isEmail = isEmail();
+                boolean isGender  = isGender();
+                boolean isConfirmPassword = isConfirmPassword();
+                boolean isPassword = isPassword();
 
-                //TODO : Start Activity
+                if (isFullName && isEmail && isGender && isConfirmPassword && isPassword){
+
+                }
+
 
             }
         });
@@ -68,4 +76,31 @@ public class SignUpBottomSheet extends BottomSheetDialogFragment {
         bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
     }
 
+    boolean isFullName(){
+        String fullName = til_fullname.getEditText().getText().toString() ;
+
+
+        return false;
+    }
+    boolean isGender(){
+        String gender = til_gender.getEditText().getText().toString();
+
+        return false;
+    }
+    boolean isEmail(){
+        String email = til_email.getEditText().getText().toString() ;
+
+        return false;
+    }
+    boolean isPassword(){
+        String password = til_password.getEditText().getText().toString() ;
+
+        return false;
+    }
+    boolean isConfirmPassword(){
+        String cnfPass = til_confirmPassword.getEditText().getText().toString() ;
+        String password = til_password.getEditText().getText().toString() ;
+
+        return false;
+    }
 }

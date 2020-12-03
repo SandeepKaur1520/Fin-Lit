@@ -7,10 +7,11 @@ android {
 
     defaultConfig {
         applicationId "com.android.finlit"
-        minSdkVersion 16
+        minSdkVersion 20
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -27,6 +28,11 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.1'
+    implementation 'androidx.navigation:navigation-ui:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -35,9 +41,15 @@ dependencies {
 //    firebase
     implementation platform('com.google.firebase:firebase-bom:25.12.0')
     implementation 'com.google.firebase:firebase-analytics'
-
     implementation 'com.google.firebase:firebase-auth:19.4.0'
-
     implementation 'com.google.android.gms:play-services-auth:18.1.0'
+    implementation 'com.google.firebase:firebase-firestore:22.0.0'
+
+    //Country code Picker
+    implementation 'com.hbb20:ccp:2.4.0'
+
+    //OTP Text View
+    implementation 'com.github.aabhasr1:OtpView:v1.1.2'
+
 
 }

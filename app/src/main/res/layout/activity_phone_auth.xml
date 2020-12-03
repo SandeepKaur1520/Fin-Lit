@@ -39,34 +39,50 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95">
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_phone"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Phone Number"
-            app:hintTextColor="@color/colorAccent">
-            <com.google.android.material.textfield.TextInputEditText
+            android:orientation="horizontal"
+            >
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp_ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textAlignment="center"
+                app:ccp_contentColor="@color/colorTextLight"
+                app:ccpDialog_textColor="@color/colorTextLight"
+                app:ccp_textSize="10dp"
+                app:ccp_defaultPhoneCode="91"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorEditTextLight"
-                android:textColor="@color/colorTextLight"
-                android:inputType="textEmailAddress"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:hint="Phone Number"
+                app:hintTextColor="@color/colorAccent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorEditTextLight"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorTextLight" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
         <Button
             android:id="@+id/btn_Phone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginTop="25dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
             android:text="Send OTP"
             android:textAllCaps="false"
             android:textColor="@color/colorTextLight"
-            android:textSize="20dp"
-            app:background="@drawable/btn_black_background"
-            app:backgroundTint="@color/colorBackground" />
-
+            app:backgroundTint="@color/colorBackground"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/colorTextLight"
+            app:strokeWidth="3dp" />
 
     </LinearLayout>
 

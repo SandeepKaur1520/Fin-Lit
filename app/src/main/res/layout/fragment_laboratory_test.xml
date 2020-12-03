@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.home.my_medical_records.laboratory_test.LaboratoryTestFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_header_medication_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackgroundLightBlue"
+            android:paddingBottom="30dp">
+
+            <TextView
+                android:id="@+id/tv_card_header_1_lab_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Laboratory \nTest"
+                android:textColor="@color/black"
+                android:textSize="35dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_card_header_1_lab_fragment"
+                android:layout_margin="20dp"
+                android:drawableLeft="@drawable/ic_calender"
+                android:text="  Date and Time"
+                android:textColor="@color/colorText"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_header_medication_fragment"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_course_details"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
+                android:hint="Treatment Provider"
+                app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusTopStart="@dimen/edit_text_corner_radius"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:endIconDrawable="@drawable/ic_baseline_search_24"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_course_details"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
+                android:hint="Test Title"
+                app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusTopStart="@dimen/edit_text_corner_radius"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:endIconDrawable="@drawable/ic_baseline_search_24"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_course_details"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
+                android:hint="Doctor"
+                app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusTopStart="@dimen/edit_text_corner_radius"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:endIconDrawable="@drawable/ic_baseline_search_24"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_course_details"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
+                android:hint="Drug Name/Medication"
+                app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusTopStart="@dimen/edit_text_corner_radius"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:endIconDrawable="@drawable/ic_baseline_search_24"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_course_details"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
+                android:hint="Drug Name/Medication"
+                app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
+                app:boxCornerRadiusTopStart="@dimen/edit_text_corner_radius"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:endIconDrawable="@drawable/ic_baseline_search_24"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attack Your Image"
+                android:layout_marginHorizontal="25dp"
+                android:textColor="@color/colorText"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@drawable/ic_baseline_add_24"
+                android:paddingBottom="25dp"
+                app:backgroundTint="@color/colorPrimaryLight"
+                app:cornerRadius="10dp"
+                android:gravity="center_horizontal|top"
+                app:strokeWidth="0dp"
+                  android:layout_marginHorizontal="25dp"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

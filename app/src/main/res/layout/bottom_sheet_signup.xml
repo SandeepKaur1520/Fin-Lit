@@ -134,19 +134,19 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-
         <Button
             android:id="@+id/btn_signup"
-            style="@style/btn_black"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginTop="25dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
             android:text="Login"
             android:textAllCaps="false"
-            android:textSize="20dp"
-            app:background="@drawable/btn_black_background"
-            app:backgroundTint="@color/colorBackground" />
+            android:textColor="@color/colorTextLight"
+            app:backgroundTint="@color/colorBackground"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/colorTextLight"
+            app:strokeWidth="3dp"/>
+
 
 
     </LinearLayout>
