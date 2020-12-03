@@ -29,6 +29,7 @@
                 android:textSize="35dp" />
 
             <TextView
+                android:id="@+id/tv_card_header_1_datetime_lab_fragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_card_header_1_lab_fragment"
@@ -38,21 +39,28 @@
                 android:textColor="@color/colorText"
                 android:textSize="20dp" />
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_below="@id/tv_card_header_1_datetime_lab_fragment">
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
                     android:text="11/26/20"
+                    android:drawableRight="@drawable/ic_baseline_edit_24"
+                    android:textAlignment="center"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="60dp"
                     android:textColor="@color/colorPrimaryLight">
                 </TextView>
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
                     android:text="09:31 AM"
+                    android:drawableRight="@drawable/ic_baseline_edit_24"
+                    android:textAlignment="center"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="60dp"
                     android:textColor="@color/colorPrimaryLight">
                 </TextView>
 
