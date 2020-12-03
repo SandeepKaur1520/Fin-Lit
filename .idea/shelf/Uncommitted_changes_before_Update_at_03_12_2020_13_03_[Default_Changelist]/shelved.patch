@@ -1,0 +1,91 @@
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"PLATFORM\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"1.8\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision f0ebd37f26d841dd2bf0556ea0f9745bc14ae1e1)
++++ .idea/gradle.xml	(date 1606975988178)
+@@ -15,6 +15,7 @@
+           </set>
+         </option>
+         <option name="resolveModulePerSourceSet" value="false" />
++        <option name="useQualifiedModuleNames" value="true" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_7\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision f0ebd37f26d841dd2bf0556ea0f9745bc14ae1e1)
++++ .idea/misc.xml	(date 1606975987409)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: app/src/main/res/drawable/ic_baseline_edit_24.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/ic_baseline_edit_24.xml	(date 1606977575143)
++++ app/src/main/res/drawable/ic_baseline_edit_24.xml	(date 1606977575143)
+@@ -0,0 +1,10 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="24dp"
++    android:height="24dp"
++    android:viewportWidth="24"
++    android:viewportHeight="24"
++    android:tint="?attr/colorControlNormal">
++  <path
++      android:fillColor="@android:color/white"
++      android:pathData="M3,17.25V21h3.75L17.81,9.94l-3.75,-3.75L3,17.25zM20.71,7.04c0.39,-0.39 0.39,-1.02 0,-1.41l-2.34,-2.34c-0.39,-0.39 -1.02,-0.39 -1.41,0l-1.83,1.83 3.75,3.75 1.83,-1.83z"/>
++</vector>
+Index: app/google-services.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"project_info\": {\r\n    \"project_number\": \"651113330091\",\r\n    \"firebase_url\": \"https://majorproject-dd980.firebaseio.com\",\r\n    \"project_id\": \"majorproject-dd980\",\r\n    \"storage_bucket\": \"majorproject-dd980.appspot.com\"\r\n  },\r\n  \"client\": [\r\n    {\r\n      \"client_info\": {\r\n        \"mobilesdk_app_id\": \"1:651113330091:android:cb0f75716de38a6193ceee\",\r\n        \"android_client_info\": {\r\n          \"package_name\": \"com.android.finlit\"\r\n        }\r\n      },\r\n      \"oauth_client\": [\r\n        {\r\n          \"client_id\": \"651113330091-7flkuh82tquaaei1fpd9b4t2edeoulvt.apps.googleusercontent.com\",\r\n          \"client_type\": 1,\r\n          \"android_info\": {\r\n            \"package_name\": \"com.android.finlit\",\r\n            \"certificate_hash\": \"c3c14b6556f9f3476509f82b2bcb84cee4114d5f\"\r\n          }\r\n        },\r\n        {\r\n          \"client_id\": \"651113330091-sjujle3mtn9cpfldk0qik0huu07abei7.apps.googleusercontent.com\",\r\n          \"client_type\": 3\r\n        }\r\n      ],\r\n      \"api_key\": [\r\n        {\r\n          \"current_key\": \"AIzaSyBNj0ATYKWIMic0Ma-WQZIuFZ93d4UdAVw\"\r\n        }\r\n      ],\r\n      \"services\": {\r\n        \"appinvite_service\": {\r\n          \"other_platform_oauth_client\": [\r\n            {\r\n              \"client_id\": \"651113330091-sjujle3mtn9cpfldk0qik0huu07abei7.apps.googleusercontent.com\",\r\n              \"client_type\": 3\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  ],\r\n  \"configuration_version\": \"1\"\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/google-services.json	(revision f0ebd37f26d841dd2bf0556ea0f9745bc14ae1e1)
++++ app/google-services.json	(date 1606979300051)
+@@ -23,6 +23,14 @@
+           }
+         },
+         {
++          "client_id": "651113330091-ve7nfjbp3kqa8u3n0k08vqd155ntbng4.apps.googleusercontent.com",
++          "client_type": 1,
++          "android_info": {
++            "package_name": "com.android.finlit",
++            "certificate_hash": "30f6fa720e5df056e5c92d18bdee52383e9f12f8"
++          }
++        },
++        {
+           "client_id": "651113330091-sjujle3mtn9cpfldk0qik0huu07abei7.apps.googleusercontent.com",
+           "client_type": 3
+         }
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(date 1606975988063)
++++ .idea/compiler.xml	(date 1606975988063)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="1.8" />
++  </component>
++</project>
+\ No newline at end of file

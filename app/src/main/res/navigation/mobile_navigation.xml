@@ -48,7 +48,7 @@
         android:id="@+id/navigation_medical_emergency"
         android:name="com.android.finlit.ui.home.medical_emergency.MedicalEmergencyFragment"
         android:label="@string/title_my_profile"
-        tools:layout="@layout/fragment_medical_emergency" >
+        tools:layout="@layout/fragment_medical_emergency">
 
     </fragment>
 
@@ -61,7 +61,7 @@
         android:id="@+id/navigation_my_medical_records"
         android:name="com.android.finlit.ui.home.my_medical_records.MyMedicalRecordFragment"
         android:label="@string/title_my_profile"
-        tools:layout="@layout/fragment_my_medical_record" >
+        tools:layout="@layout/fragment_my_medical_record">
         <action
             android:id="@+id/action_navigation_my_medical_records_to_navigation_add_event"
             app:destination="@id/navigation_add_event" />
@@ -77,10 +77,10 @@
         android:label="@string/title_my_profile"
         tools:layout="@layout/fragment_covid" />
     <fragment
-    android:id="@+id/navigation_add_event"
-    android:name="com.android.finlit.ui.home.my_medical_records.AddEventFragment"
-    android:label="@string/title_my_profile"
-    tools:layout="@layout/fragment_add_event" >
+        android:id="@+id/navigation_add_event"
+        android:name="com.android.finlit.ui.home.my_medical_records.AddEventFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_add_event">
         <action
             android:id="@+id/action_navigation_add_event_to_navigation_disease"
             app:destination="@id/navigation_disease" />
@@ -117,10 +117,50 @@
         android:id="@+id/navigation_measurement"
         android:name="com.android.finlit.ui.home.my_medical_records.measurement.MeasurementFragment"
         android:label="@string/title_my_profile"
-        tools:layout="@layout/fragment_measurement" />
+        tools:layout="@layout/fragment_measurement" >
+        <action
+            android:id="@+id/action_navigation_measurement_to_navigation_pulse"
+            app:destination="@id/navigation_pulse" />
+        <action
+            android:id="@+id/action_navigation_measurement_to_navigation_height"
+            app:destination="@id/navigation_height" />
+        <action
+            android:id="@+id/action_navigation_measurement_to_navigation_blood_pressure"
+            app:destination="@id/navigation_blood_pressure" />
+        <action
+            android:id="@+id/action_navigation_measurement_to_navigation_sugar_level"
+            app:destination="@id/navigation_sugar_level" />
+        <action
+            android:id="@+id/action_navigation_measurement_to_navigation_weight"
+            app:destination="@id/navigation_weight" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_medication"
         android:name="com.android.finlit.ui.home.my_medical_records.medication.MedicationFragment"
         android:label="@string/title_my_profile"
         tools:layout="@layout/fragment_medication" />
+    <fragment
+        android:id="@+id/navigation_blood_pressure"
+        android:name="com.android.finlit.ui.home.my_medical_records.measurement.blood_pressure.BloodPressureFragment"        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_blood_pressure" />
+    <fragment
+        android:id="@+id/navigation_height"
+        android:name="com.android.finlit.ui.home.my_medical_records."
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_height" />
+    <fragment
+        android:id="@+id/navigation_weight"
+        android:name="com.android.finlit.ui.home.my_medical_records.measurement.weight.WeightFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_weight" />
+    <fragment
+        android:id="@+id/navigation_sugar_level"
+        android:name="com.android.finlit.ui.home.my_medical_records.measurement.sugar_level.SugarLevelFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_sugar_level" />
+    <fragment
+        android:id="@+id/navigation_pulse"
+        android:name="com.android.finlit.ui.home.my_medical_records.measurement.pulse.PulseFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_pulse" />
 </navigation>

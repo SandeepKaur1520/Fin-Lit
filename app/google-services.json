@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "651113330091-ve7nfjbp3kqa8u3n0k08vqd155ntbng4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.finlit",
+            "certificate_hash": "30f6fa720e5df056e5c92d18bdee52383e9f12f8"
+          }
+        },
+        {
           "client_id": "651113330091-sjujle3mtn9cpfldk0qik0huu07abei7.apps.googleusercontent.com",
           "client_type": 3
         }
