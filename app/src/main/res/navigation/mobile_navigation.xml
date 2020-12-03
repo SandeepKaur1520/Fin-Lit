@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.android.finlit.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_find_doctor"
+            app:destination="@id/navigation_find_doctor" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_covid"
+            app:destination="@id/navigation_covid" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_symptom_diagonosis"
+            app:destination="@id/navigation_symptom_diagonosis" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_medical_emergency"
+            app:destination="@id/navigation_medical_emergency" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_my_medical_records"
+            app:destination="@id/navigation_my_medical_records" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.android.finlit.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.android.finlit.ui.notifications.NotificationsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/navigation_my_profile"
+        android:name="com.android.finlit.ui.my_profile.MyProfileFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_my_profile" />
+
+    <fragment
+        android:id="@+id/navigation_medical_emergency"
+        android:name="com.android.finlit.ui.home.medical_emergency.MedicalEmergencyFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_medical_emergency" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_symptom_diagonosis"
+        android:name="com.android.finlit.ui.home.symptom_diagonosis.SymptomDiagonosisFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_symptom_diagonosis" />
+    <fragment
+        android:id="@+id/navigation_my_medical_records"
+        android:name="com.android.finlit.ui.home.my_medical_records.MyMedicalRecordFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_my_medical_record" >
+        <action
+            android:id="@+id/action_navigation_my_medical_records_to_navigation_add_event"
+            app:destination="@id/navigation_add_event" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_find_doctor"
+        android:name="com.android.finlit.ui.home.find_doctor.FindDoctorFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_find_doctor" />
+    <fragment
+        android:id="@+id/navigation_covid"
+        android:name="com.android.finlit.ui.home.covid.CovidFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_covid" />
+    <fragment
+    android:id="@+id/navigation_add_event"
+    android:name="com.android.finlit.ui.home.my_medical_records.AddEventFragment"
+    android:label="@string/title_my_profile"
+    tools:layout="@layout/fragment_add_event" >
+        <action
+            android:id="@+id/action_navigation_add_event_to_navigation_disease"
+            app:destination="@id/navigation_disease" />
+        <action
+            android:id="@+id/action_navigation_add_event_to_navigation_doctor_appointment"
+            app:destination="@id/navigation_doctor_appointment" />
+        <action
+            android:id="@+id/action_navigation_add_event_to_navigation_laboratory_test"
+            app:destination="@id/navigation_laboratory_test" />
+        <action
+            android:id="@+id/action_navigation_add_event_to_navigation_measurement"
+            app:destination="@id/navigation_measurement" />
+        <action
+            android:id="@+id/action_navigation_add_event_to_navigation_medication"
+            app:destination="@id/navigation_medication" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_disease"
+        android:name="com.android.finlit.ui.home.my_medical_records.disease.DiseaseFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_disease" />
+    <fragment
+        android:id="@+id/navigation_doctor_appointment"
+        android:name="com.android.finlit.ui.home.my_medical_records.doctor_appointment.DoctorAppointmentFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_doctor_appointment" />
+    <fragment
+        android:id="@+id/navigation_laboratory_test"
+        android:name="com.android.finlit.ui.home.my_medical_records.laboratory_test.LaboratoryTestFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_laboratory_test" />
+    <fragment
+        android:id="@+id/navigation_measurement"
+        android:name="com.android.finlit.ui.home.my_medical_records.measurement.MeasurementFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_measurement" />
+    <fragment
+        android:id="@+id/navigation_medication"
+        android:name="com.android.finlit.ui.home.my_medical_records.medication.MedicationFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/fragment_medication" />
+</navigation>
