@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fillViewport="true"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".ui.home.my_medical_records.measurement.sugar_level.SugarLevelFragment">
 
     <LinearLayout
@@ -80,6 +80,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="10"
                 android:layout_marginVertical="10dp">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -87,7 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/til_course_details"
-                    android:layout_weight="4"
+                    android:layout_weight="9"
                     android:hint="Sugar Level"
                     app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
                     app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
@@ -102,13 +103,11 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/til_course_details"
-
                     android:layout_weight="1"
-                    android:hint="units"
+                    android:hint="Units"
                     app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
                     app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
                     app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
@@ -116,12 +115,13 @@
                     app:boxStrokeColor="@color/black"
                     app:boxStrokeWidth="2dp">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
+                        android:id="@+id/actv_sugar_level_units"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="none" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
-
 
 
             <LinearLayout
@@ -133,6 +133,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/til_course_details"
                     android:layout_weight="4"
                     android:hint="Comment"
                     app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"

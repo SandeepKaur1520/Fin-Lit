@@ -102,14 +102,13 @@
                         android:layout_height="wrap_content" />
                 </com.google.android.material.textfield.TextInputLayout>
 
+
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/til_course_details"
-
+                    android:hint="Units"
                     android:layout_weight="1"
-                    android:hint="units"
                     app:boxCornerRadiusBottomEnd="@dimen/edit_text_corner_radius"
                     app:boxCornerRadiusBottomStart="@dimen/edit_text_corner_radius"
                     app:boxCornerRadiusTopEnd="@dimen/edit_text_corner_radius"
@@ -117,10 +116,13 @@
                     app:boxStrokeColor="@color/black"
                     app:boxStrokeWidth="2dp">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
+                        android:id="@+id/actv_pulse_units"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="none"/>
                 </com.google.android.material.textfield.TextInputLayout>
+
             </LinearLayout>
 
 
