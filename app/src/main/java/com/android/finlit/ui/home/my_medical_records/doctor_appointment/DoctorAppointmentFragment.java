@@ -47,7 +47,7 @@ public class DoctorAppointmentFragment extends Fragment {
         String[] appointmentState  = new String[] {"Scheduled", "To Be scheduled", "Completed", "Cancelled" ,"Missed"};
 
         ArrayAdapter<String> appointmentTypeAdapter = new ArrayAdapter<>(getContext(),  R.layout.dropdown_menu_popup_item, appointmentType);
-        ArrayAdapter<String> appointmentStateAdapter = new ArrayAdapter<>(getContext(),  R.layout.dropdown_menu_popup_item, appointmentType);
+        ArrayAdapter<String> appointmentStateAdapter = new ArrayAdapter<>(getContext(),  R.layout.dropdown_menu_popup_item, appointmentState);
 
         actv_appointment_type.setAdapter(appointmentTypeAdapter);
         actv_appointment_state.setAdapter(appointmentStateAdapter);
