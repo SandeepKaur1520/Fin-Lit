@@ -1,5 +1,7 @@
 package com.android.finlit.ui.home.covid;
 
+import android.icu.text.NumberFormat;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -67,9 +69,19 @@ public class CovidFragment extends Fragment {
 
                 try {
                     Log.d(TAG, "onResponse: "+response);
-                    tv_total_confirmed.setText(response.getJSONObject("confirmed").getString("value"));
-                    tv_total_deaths.setText(response.getJSONObject("deaths").getString("value"));
-                    tv_total_recovered.setText(response.getJSONObject("recovered").getString("value"));
+
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+
+                        tv_total_confirmed.setText(NumberFormat.getIntegerInstance().format(response.getJSONObject("confirmed").getInt("value")));
+
+                        tv_total_deaths.setText(NumberFormat.getIntegerInstance().format(response.getJSONObject("deaths").getInt("value")));
+                        tv_total_recovered.setText(NumberFormat.getIntegerInstance().format(response.getJSONObject("recovered").getInt("value")));
+                    }else{
+                        tv_total_confirmed.setText(response.getJSONObject("confirmed").getString("value"));
+                        tv_total_deaths.setText(response.getJSONObject("deaths").getString("value"));
+                        tv_total_recovered.setText(response.getJSONObject("recovered").getString("value"));
+                    }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
