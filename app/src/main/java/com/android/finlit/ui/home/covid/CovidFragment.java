@@ -4,11 +4,19 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.android.finlit.R;
+import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.JSONObjectRequestListener;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,33 +25,18 @@ import com.android.finlit.R;
  */
 public class CovidFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String TAG = "CovidFragment";
+    TextView tv_total_deaths,tv_total_recovered,tv_total_confirmed;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public CovidFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CovidFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static CovidFragment newInstance(String param1, String param2) {
         CovidFragment fragment = new CovidFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -52,8 +45,7 @@ public class CovidFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
@@ -61,6 +53,35 @@ public class CovidFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_covid, container, false);
+        View root = inflater.inflate(R.layout.fragment_covid, container, false);
+
+        tv_total_confirmed = root.findViewById(R.id.tv_total_confirmed);
+        tv_total_deaths = root.findViewById(R.id.tv_total_deaths);
+        tv_total_recovered = root.findViewById(R.id.tv_total_recovered);
+
+        String url = getActivity().getString(R.string.COVID_API_BASE_URL);
+
+        AndroidNetworking.get(url).build().getAsJSONObject(new JSONObjectRequestListener() {
+            @Override
+            public void onResponse(JSONObject response) {
+
+                try {
+                    Log.d(TAG, "onResponse: "+response);
+                    tv_total_confirmed.setText(response.getJSONObject("confirmed").getString("value"));
+                    tv_total_deaths.setText(response.getJSONObject("deaths").getString("value"));
+                    tv_total_recovered.setText(response.getJSONObject("recovered").getString("value"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onError(ANError anError) {
+
+            }
+        });
+
+
+        return root;
     }
 }
