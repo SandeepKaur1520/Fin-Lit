@@ -20,11 +20,6 @@ import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CovidFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class CovidFragment extends Fragment {
 
     private static final String TAG = "CovidFragment";

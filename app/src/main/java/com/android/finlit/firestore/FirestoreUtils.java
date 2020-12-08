@@ -30,4 +30,31 @@ public class FirestoreUtils {
 
     }
 
+    public Task uploadUserPulse(FirebaseUser firebaseUser,Map Data){
+
+
+        Task uploadTask = db.collection("users").document(firebaseUser.getUid()).collection("measurement__pulse").add(Data);
+
+
+        return uploadTask;
+
+    }
+    public Task uploadUserHeight(FirebaseUser firebaseUser,Map Data){
+
+
+        Task uploadTask = db.collection("users").document(firebaseUser.getUid()).collection("measurement__height").add(Data);
+
+
+        return uploadTask;
+
+    }
+    public Task uploadUserSugarLevel(FirebaseUser firebaseUser,Map Data){
+
+
+        Task uploadTask = db.collection("users").document(firebaseUser.getUid()).collection("measurement__sugar_level").add(Data);
+
+
+        return uploadTask;
+
+    }
 }
